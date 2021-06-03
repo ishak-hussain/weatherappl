@@ -10,7 +10,6 @@ let weather = {
 
   apiKey: "8da6262978b61e4044f6b774ce91da55",
 
-  // http://api.openweathermap.org/data/2.5/weather?q=london&units=metric&appid=8da6262978b61e4044f6b774ce91da55
   // The above line of code will show the API data for the current weather in London. London in the URL can be changed to any other city. &units=metric& was also used to obtain data in celsius.
   // this can now be used in a new function to fetch the weather data
 
