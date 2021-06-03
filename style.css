@@ -1,0 +1,130 @@
+/* Global styles */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  /* Align card to the middle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  /* styling background with random pic from source.unsplash */
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  background-size: cover;
+
+  /* increase default font-size */
+  font-size: 120%;
+}
+
+/* Styles for card */
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 20px;
+
+  /* Width: 100% used to fill up entire viewport on small screens */
+  width: 100%;
+  /* Max-width of 420px for bigger screens */
+  max-width: 420px;
+
+  /* Purpose of margin: 1em is to have additional spacing left and right of the card on small screens */
+  margin: 1em;
+}
+
+/* Styles for search box */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search button {
+  margin: 1em;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+
+  /* Match height of button to input */
+  height: 40px;
+  width: 40px;
+
+  /* same background as input */
+  background: #7c7c7c2b;
+  color: white;
+
+  cursor: pointer;
+}
+
+.search button:hover {
+  /* button slightly less transparent on hover */
+  background: #7c7c7c6b;
+
+  transition: all 0.2s ease-in-out;
+}
+
+input.search-bar {
+  outline: none;
+  border: none;
+  padding: 0.35em 1em;
+  border-radius: 24px;
+
+  /* light greyish faint colour with white text*/
+  background: #7c7c7c2b;
+  color: white;
+
+  /* same fontfamily as parent */
+  font-family: inherit;
+
+  font-size: 100%;
+  width: calc(100% - 60px);
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+  color: rgba(255, 255, 255, 0.411);
+}
+
+/* Change description style text so it's not lower case */
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* To not show the default template on startup, set display: none */
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+/* Giving feedback that the weather is loading */
+.weather.loading::after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+
+  /* position relative and absolute used to align elements from initial and after pseudo states */
+  position: absolute;
+  /* to position top of the parent element */
+  top: 0;
+  left: 20px;
+}
