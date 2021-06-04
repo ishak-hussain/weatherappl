@@ -17,7 +17,7 @@ let weather = {
     fetch(
       // change the URL from London to any city
       // appID is also stored as a different variable so this too can be changed
-      "http://api.openweathermap.org/data/2.5/weather?q=" +
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
         "&units=metric&appid=" +
         this.apiKey
