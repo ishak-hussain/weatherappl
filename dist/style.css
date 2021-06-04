@@ -110,21 +110,21 @@ h1.temp {
 }
 
 /* To not show the default template on startup, set display: none */
-.weather.loading {
+/* .weather.loading {
   visibility: hidden;
   max-height: 20px;
   position: relative;
-}
+} */
 
 /* Giving feedback that the weather is loading */
-.weather.loading::after {
+/* .weather.loading::after {
   visibility: visible;
   content: "Loading...";
-  color: white;
+  color: white; */
 
-  /* position relative and absolute used to align elements from initial and after pseudo states */
-  position: absolute;
-  /* to position top of the parent element */
-  top: 0;
-  left: 20px;
-}
+/* position relative and absolute used to align elements from initial and after pseudo states 
+    position: absolute; 
+    to position top of the parent element 
+    top: 0;
+    left: 20px; 
+}*/
